@@ -1,5 +1,6 @@
 # autoemail
-Automation of manual data entry task & sending of email with attached word document.  
+Automation of manual data entry task & sending of email with attached word document.
+file - "senderParticulars" is intentionally left out as it contains sensitive information.
 
 ## Specifications
 Python 3.9.0
