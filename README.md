@@ -27,7 +27,7 @@ Please run following command to download python-docx package.
 1. pip install python-docx
 
 ## Run Script
-1. Open "cmd" or "bash"
+1. Open "cmd"
 2. "cd" to project root directory 
 3. Run "python manage.py autoemail.py [blk] [unit no.] [1/2] [B/E]
 
