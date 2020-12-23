@@ -1,8 +1,7 @@
 # autoemail
 Automation of manual data entry task & sending of email with attached word document.
 
-
-file - "senderParticulars" is intentionally left out as it contains sensitive information.
+file - "senderParticulars" in "autoemail.py" is intentionally left out as it contains sensitive information.
 
 ## Specifications
 Python 3.9.0
@@ -31,3 +30,4 @@ Please run following command to download python-docx package.
 1. Open "cmd" or "bash"
 2. "cd" to project root directory 
 3. Run "python manage.py autoemail.py [blk] [unit no.] [1/2] [B/E]
+
