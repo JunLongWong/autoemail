@@ -10,7 +10,7 @@ from datetime import date, datetime
 import datetime
 import sys
 import pytz
-import senderParticulars #this file contains sensitive information, data is left blank 
+import senderParticulars #this file contains sensitive information, file not provided on github 
 import sorItemFiles
 
 
