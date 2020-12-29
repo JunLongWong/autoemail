@@ -31,5 +31,5 @@ Please run following command to download python-docx package.
 ## Run Script
 1. Open "cmd"
 2. "cd" to project root directory 
-3. Run "python manage.py autoemail.py [blk] [unit no.] [1/2] [B/E]
+3. Run "python autoemail.py [blk] [unit no.] [1/2] [B/E]
 
