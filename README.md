@@ -1,7 +1,7 @@
 # autoemail
 ## Automation of manual data entry task & sending of email with attached word document.
 
-This script create & populate a word document in a pre-defined format & automatically send out email with attached word document to the other party.
+This script create & populate a word document in a pre-defined format & automatically send out 2 email, 1 email with attached word document, another plain text email to the other party.
 
 file - "senderParticulars" in "autoemail.py" is intentionally left out as it contains sensitive information.
 
