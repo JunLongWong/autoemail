@@ -29,9 +29,9 @@ import Blk632a_1Rm_Elec
 # send email with attached works order to team C EE & notice of account closure to HS 
 def sendemail(fn, receiverEmail, receiver_email_HS, blk, unitNo, typeOfWorks, streetName):
     sender_email = senderParticulars.email
-    #team C AE email
+    # team C AE email
     receiver_email = receiverEmail
-    #HS team AE email
+    # HS team AE email
     receiverHS = receiver_email_HS
     # Building or Electrical WO
     type_Works = typeOfWorks
@@ -51,15 +51,15 @@ def sendemail(fn, receiverEmail, receiver_email_HS, blk, unitNo, typeOfWorks, st
     msg.attach(MIMEText(body, 'plain'))
     # open the file to be sent  
     filename = fn 
-    # #Open the file in binary mode
+    # Open the file in binary mode
     with open(filename, "rb") as attachment:
         #Add file as application/octet-stream
         #Email client can usually download this automatically as attachment
         part = MIMEBase("application", "octet-stream")
         part.set_payload(attachment.read())
-    # #encode file in ASCII characters to send by email
+    # encode file in ASCII characters to send by email
     encoders.encode_base64(part)
-    # # Add header as key/value pair to attachment part
+    # Add header as key/value pair to attachment part
     part.add_header(
         "Content-Disposition",
         f"attachment; filename= {filename}",
@@ -286,14 +286,15 @@ def main():
         
         if (sys.argv[4] == "B"):
             print(f"Generating WO for blk {sys.argv[1]}, {sys.argv[3]}-Room, Building works...")
-        elif (sys.argv[4] == "E"):
+        if (sys.argv[4] == "E"):
             print(f"Generating WO for blk {sys.argv[1]}, {sys.argv[3]}-Room, Electrical works...")
 
-        # sending to different AE's from CR & HS team for different estates    
+        # sending to different AE's from CR & HS team for different estates
+        # For BP estate    
         if (sys.argv[1].lower() == '632a' or sys.argv[1].lower() == '632b'):
             receiver_Email_WO = senderParticulars.teamC_bp_receiverEmail
             receiver_email_HS = senderParticulars.hS_bp_ae_email
-        else:
+        else: #For CK Estate
             receiver_Email_WO = senderParticulars.teamC_ck_receiverEmail
             receiver_email_HS = senderParticulars.hS_ck_ae_email
         
